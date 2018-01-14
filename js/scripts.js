@@ -9,7 +9,7 @@ $(window).scroll(function() {
 });
 
 // Tabs to choose calculator
-$('#fitTabs .nav-item:first-child .nav-link').tab('show');
+$('#fitTabs .nav-item:last-child .nav-link').tab('show');
 
 // Daily Energy Expenditure Calculator
 $('.gender .pick:first-child').addClass('active');
@@ -108,6 +108,7 @@ $('.submit-expend').click(function() {
   }
 
   $('.expend-calc').addClass('animated-expend');
+  $('html, body').animate({scrollTop:$('.expend-calc').position().top}, '2000');
 });
 
 });
