@@ -1,9 +1,13 @@
 // compile main
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500')
+
+$phone: "only screen and (max-width: 568px)"
+$tablet: "only screen and (max-width: 1024px) and (min-width: 569px)"
+
 html
   body
     font-family: 'Roboto', sans-serif
-    height: 100vh
+    min-height: 100vh
     color: white
     text-align: center
     h1, h2, h3, h4, h5, h6, p
@@ -32,7 +36,7 @@ html
 
 .animated-expend
   opacity: 1 !important
-  margin-bottom: 1.5rem
+  top: 3rem !important
 
 @import 'header'
 @import 'home'

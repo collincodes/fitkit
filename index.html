@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
     <title>fitKit</title>
-    <link rel="stylesheet" href="compiled/styles.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="compiled/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 
@@ -17,31 +16,36 @@
   <body>
 
     <header>
-      <ul class="nav nav-pills" id="fitTabs" role="tablist">
-        <li class="nav-item">
-          <a class="nav-link" href="#macros" data-toggle="tab">macros</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#bodymass" data-toggle="tab">body mass index</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#expend" data-toggle="tab">daily energy expenditure</a>
-        </li>
-      </ul>
+      <div class="header">
+        <ul class="nav nav-pills" id="fitTabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link" href="#macros" data-toggle="tab">macros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#bodymass" data-toggle="tab">body mass index</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#expend" data-toggle="tab">daily energy expenditure</a>
+          </li>
+        </ul>
+      </div>
     </header>
 
     <section class="hero">
       <div class="tab-content">
 
-        <div class="tab-pane" id="macros">
+        <div class="tab-pane" id="macros" role="tabpanel">
           <h1>Calculate Your Macros</h1>
+          <h3 class="sub-heading">
+            This should be your sub-heading.
+          </h3>
         </div>
 
-        <div class="tab-pane" id="bodymass">
+        <div class="tab-pane" id="bodymass" role="tabpanel">
           <h1>Calculate Your BMI</h1>
         </div>
 
-        <div class="tab-pane" id="expend">
+        <div class="tab-pane" id="expend" role="tabpanel">
           <h1>Calculate Your Daily Energy Expenditure</h1>
           <div class="gender">
             <div class="male pick">
@@ -51,6 +55,8 @@
               <h6>female</h6>
             </div>
           </div>
+
+          <h5 class="input-message">Enter Your Weight, Age, & Height Below & Choose Activity Level</h5>
 
           <div class="variables">
             <div class="weight variable">
@@ -64,6 +70,21 @@
             </div>
             <div class="inches variable">
               <input type="text" name="inches" placeholder="Inches">
+            </div>
+          </div>
+
+          <div class="activity">
+            <div class="sedentary pick">
+              <h6>sedentary</h6>
+            </div>
+            <div class="lightly pick">
+              <h6>lightly<br />active</h6>
+            </div>
+            <div class="moderately pick">
+              <h6>moderately<br />active</h6>
+            </div>
+            <div class="heavily pick">
+              <h6>heavily<br />active</h6>
             </div>
           </div>
 
