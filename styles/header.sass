@@ -3,8 +3,27 @@
 header
   padding: 2rem 5vw
   position: fixed
+  top: 0
+  left: 0
   width: 100%
-  transition: 0.5s
+  transition: 0.25s
+  #fitTabs
+    display: flex
+    align-items: center
+    .nav-item
+      flex: 1
+      text-align: center
+      padding: 0 2rem
+      .nav-link
+        border-radius: 2rem
+        border: 2px solid transparent
+        color: rgba(255,255,255,0.7)
+        transition: 0.5s
+      .nav-link.active
+        background-color: black
+        color: white
+        border: 2px solid white
+
 
 .header-active
   padding: 1rem 5vw

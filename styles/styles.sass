@@ -1,4 +1,38 @@
 // compile main
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500')
+html
+  body
+    font-family: 'Roboto', sans-serif
+    height: 100vh
+    color: white
+    text-align: center
+    h1, h2, h3, h4, h5, h6, p
+      margin-bottom: 0
+    h1
+      font-weight: 100
+    input, input:focus
+      background-color: rgba(255,255,255,0.05)
+      border: none
+      border-radius: 2rem
+      padding: 0.5rem 1rem
+      flex: 1
+      margin: 1rem 0
+      outline: transparent
+      text-align: center
+      letter-spacing: 1px
+      color: white
+    input::placeholder
+      color: rgba(255,255,255,0.8)
+      text-align: center
+      text-transform: lowercase
+      transition: 0.2s
+      letter-spacing: 1px
+    input:focus::-webkit-input-placeholder
+      color: transparent
+
+.animated-expend
+  opacity: 1 !important
+  margin-bottom: 1.5rem
 
 @import 'header'
 @import 'home'

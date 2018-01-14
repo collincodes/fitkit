@@ -3,32 +3,77 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>fitKit</title>
     <link rel="stylesheet" href="compiled/styles.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 
-    <script src="js/scripts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js" integrity="sha384-VspmFJ2uqRrKr3en+IG0cIq1Cl/v/PHneDw6SQZYgrcr8ZZmZoQ3zhuGfMnSR/F2" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   </head>
   <body>
-    <header>
 
+    <header>
+      <ul class="nav nav-pills" id="fitTabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link" href="#macros" data-toggle="tab">macros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#bodymass" data-toggle="tab">body mass index</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#expend" data-toggle="tab">daily energy expenditure</a>
+        </li>
+      </ul>
     </header>
 
     <section class="hero">
+      <div class="tab-content">
 
+        <div class="tab-pane" id="macros">
+          <h1>Calculate Your Macros</h1>
+        </div>
+
+        <div class="tab-pane" id="bodymass">
+          <h1>Calculate Your BMI</h1>
+        </div>
+
+        <div class="tab-pane" id="expend">
+          <h1>Calculate Your Daily Energy Expenditure</h1>
+          <div class="gender">
+            <div class="male pick">
+              <h6>male</h6>
+            </div>
+            <div class="female pick">
+              <h6>female</h6>
+            </div>
+          </div>
+
+          <div class="variables">
+            <div class="weight variable">
+              <input type="text" name="weight" placeholder="Weight">
+            </div>
+            <div class="age variable">
+              <input type="text" name="age" placeholder="Age">
+            </div>
+            <div class="feet variable">
+              <input type="text" name="feet" placeholder="Feet">
+            </div>
+            <div class="inches variable">
+              <input type="text" name="inches" placeholder="Inches">
+            </div>
+          </div>
+
+          <h5 class="submit-expend">submit</h5>
+
+          <h2 class="expend-calc"></h2>
+        </div>
+
+      </div>
     </section>
 
-    <section class="one">
-
-    </section>
-
-    <section class="two">
-
-    </section>
   </body>
 </html>
