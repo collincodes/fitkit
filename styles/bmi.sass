@@ -1,0 +1,53 @@
+// main: styles.sass
+
+#bodymass
+  .bmi-message
+    letter-spacing: 1px
+    margin-bottom: 1rem
+    font-weight: 300
+    transition: 0.5s
+  .input-message
+    letter-spacing: 1px
+    font-weight: 300
+  .variables
+    display: flex
+    align-items: center
+    justify-content: center
+    .variable
+      display: flex
+      justify-content: space-around
+      width: 100%
+      input
+        margin: 2rem 0 1rem
+      input:nth-child(2)
+        margin-left: 1rem
+        margin-right: 1rem
+  .submit-bmi
+    margin-top: 2rem
+    padding: 1rem 5rem
+    border: 2px solid white
+    border-radius: 2rem
+    cursor: pointer
+    letter-spacing: 1px
+    font-weight: 300
+  .bmi-calc
+    opacity: 0
+    transition: 0.5s
+    width: 100%
+    position: relative
+    padding-bottom: 1rem
+    margin-top: 2rem
+    font-size: 2.5rem
+    font-weight: 100
+  .classification
+    letter-spacing: 1px
+    padding-bottom: 2rem
+
+@media #{$medium}
+  .variables
+    .variable
+      flex-wrap: wrap
+      margin-top: 1rem
+      input
+        flex: 0 0 100% !important
+        margin: 1rem 0 0 !important

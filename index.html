@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
-    <title>fitKit</title>
+    <title>The Fit Kit</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link rel="stylesheet" href="compiled/styles.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
@@ -43,6 +43,24 @@
 
         <div class="tab-pane" id="bodymass" role="tabpanel">
           <h1>Calculate Your BMI</h1>
+
+          <h5 class="bmi-message">BMI is a Simple & Basic Measurement Used to Classify an Adult Individual's Body Composition.</h5>
+          <h6 class="input-message">Enter Your Height & Weight Below.</h6>
+
+          <div class="variables">
+            <div class="variable">
+              <input type="text" name="feet" placeholder="feet">
+              <input type="text" name="inches" placeholder="inches">
+
+              <input type="text" name="weight" placeholder="weight">
+            </div>
+          </div>
+
+          <h5 class="submit-bmi">submit</h5>
+
+          <h2 class="bmi-calc"></h2>
+          <h3 class="classification"></h3>
+
         </div>
 
         <div class="tab-pane" id="expend" role="tabpanel">
@@ -84,7 +102,7 @@
               <h6>moderately<br />active</h6>
             </div>
             <div class="heavily pick">
-              <h6>heavily<br />active</h6>
+              <h6>heavily<br /> active</h6>
             </div>
           </div>
 

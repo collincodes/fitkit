@@ -1,61 +1,81 @@
 $(document).ready(function() {
+// Scroll Animation
 
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 100) {
-    $('header').addClass('header-active');
-  } else {
-    $('header').removeClass('header-active');
-  }
-});
+// $(window).scroll(function() {
+//   if ($(window).scrollTop() > 100) {
+//     $('header').addClass('header-active');
+//   } else {
+//     $('header').removeClass('header-active');
+//   }
+// });
+
 
 // Tabs to choose calculator
+
 $('#fitTabs .nav-item:last-child .nav-link').tab('show');
 
+
 // Daily Energy Expenditure Calculator
+
 $('.gender .pick:first-child').addClass('active');
 $('.gender .pick').click(function() {
   $(this).addClass('active');
   $(this).siblings().removeClass('active');
 });
 
+
 $('.activity .pick:first-child').addClass('active');
 $('.activity .pick').click(function() {
   $(this).addClass('active');
   $(this).siblings().removeClass('active');
 
-  var $clear = $('.input-message').empty();
+  var $expendMessage = $('#expend .input-message');
+  var $clear = $expendMessage.empty();
 
   if ($('.sedentary').hasClass('active')) {
     $clear;
-    $('.input-message').append('LITTLE TO NO DAILY ACTIVITY');
+    $expendMessage.append('LITTLE TO NO DAILY ACTIVITY');
   } else if ($('.lightly').hasClass('active')) {
     $clear;
-    $('.input-message').append('ACTIVE 1-3 DAYS PER WEEK');
+    $expendMessage.append('ACTIVE 1-3 DAYS PER WEEK');
   } else if ($('.moderately').hasClass('active')) {
     $clear;
-    $('.input-message').append('ACTIVE 3-5 DAYS PER WEEK');
+    $expendMessage.append('ACTIVE 3-5 DAYS PER WEEK');
   } else if ($('.heavily').hasClass('active')) {
     $clear;
-    $('.input-message').append('ACTIVE 6-7 DAYS PER WEEK');
+    $expendMessage.append('ACTIVE 6-7 DAYS PER WEEK');
   }
 });
 
+
 // Update Input Message
+
+var $expendMessage = $('#expend .input-message');
+var $bmiMessage = $('#bodymass .input-message');
+
 $('.variable input[name="weight"]').focus(function() {
-  $('.input-message').empty();
-  $('.input-message').append('Enter Weight in Pounds');
+  $expendMessage.empty();
+  $expendMessage.append('Enter Weight in Pounds');
+
+  $bmiMessage.empty();
+  $bmiMessage.append('Enter Weight in Pounds')
 });
 
 $('.variable input[name="age"]').focus(function() {
-  $('.input-message').empty();
-  $('.input-message').append('Enter Age in Years');
+  $expendMessage.empty();
+  $expendMessage.append('Enter Age in Years');
 });
 
 $('.variable input[name="feet"]').focus(function() {
-  $('.input-message').empty();
-  $('.input-message').append('Enter Height in Feet & Inches');
+  $expendMessage.empty();
+  $expendMessage.append('Enter Height in Feet & Inches');
+
+  $bmiMessage.empty();
+  $bmiMessage.append('Enter Height in Feet & Inches')
 });
 
+
+// Submit Expenditure Data
 
 $('.submit-expend').click(function() {
   $('.expend-calc').empty();
@@ -109,6 +129,49 @@ $('.submit-expend').click(function() {
 
   $('.expend-calc').addClass('animated-expend');
   $('html, body').animate({scrollTop:$('.expend-calc').position().top}, '2000');
+});
+
+$('.submit-bmi').click(function() {
+  $('.bmi-calc').empty();
+  $('.classification').empty();
+  var $feetInput = $('#bodymass .variables .variable input[name="feet"]');
+  var $inchesInput = $('#bodymass .variables .variable input[name="inches"]');
+  var $weightInput = $('#bodymass .variables .variable input[name="weight"]');
+
+  var $bmiFeet = $feetInput.val();
+  var $bmiInch = $inchesInput.val();
+  var $ftConv = parseInt($bmiFeet) * 30.48;
+  var $inConv = parseInt($bmiInch) * 2.54;
+  var $height = $ftConv + $inConv;
+  var $meters = $height * 0.01;
+
+  var $bmiWeight = $weightInput.val();
+  var $weightConv = parseInt($bmiWeight) / 2.2;
+  var $kg = $weightConv
+
+  var $bmi = (($kg) / ($meters * $meters));
+
+  if ($feetInput.val() && $inchesInput.val() && $weightInput.val()) {
+    $('.bmi-calc').append($bmi.toFixed(1));
+  } else {
+    $('.bmi-calc').append('please fill out all fields.');
+  }
+
+  if ($bmi < 18.5) {
+    $('.classification').append('underweight');
+  } else if (($bmi >= 18.5) && ($bmi < 25.0)) {
+    $('.classification').append('normal')
+  } else if (($bmi >= 25.0) && ($bmi < 30.0)) {
+    $('.classification').append('overweight');
+  } else if (($bmi >= 30.0) && ($bmi < 35.0)) {
+    $('.classification').append('class 1 obesity');
+  } else if (($bmi >= 35.0) && ($bmi < 40.0)) {
+    $('.classification').append('class 2 obesity');
+  } else if ($bmi >= 40) {
+    $('.classification').append('class 3 obesity');
+  }
+
+  $('.bmi-calc').addClass('animated-bmi');
 });
 
 });
