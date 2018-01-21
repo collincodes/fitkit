@@ -9,6 +9,12 @@ $(document).ready(function() {
 //   }
 // });
 
+// Only allow numbers on input
+
+$('input').keypress(function(key) {
+  if (key.charCode < 48 || key.charCode > 57)
+    return false;
+});
 
 // Tabs to choose calculator
 
@@ -104,7 +110,7 @@ $('.submit-expend').click(function() {
           counter: $sedentaryMale
         }, {
           duration: 1500,
-          easing: 'swing',
+          easing: 'easeOutBack',
           step: function(x) {
             $('.expend-calc').text((x).toFixed(1) + " Calories");
           }
@@ -116,7 +122,7 @@ $('.submit-expend').click(function() {
           counter: $lightlyMale
         }, {
           duration: 1500,
-          easing: 'swing',
+          easing: 'easeOutBack',
           step: function(x) {
             $('.expend-calc').text((x).toFixed(1) + " Calories");
           }
@@ -128,7 +134,7 @@ $('.submit-expend').click(function() {
           counter: $moderatelyMale
         }, {
           duration: 1500,
-          easing: 'swing',
+          easing: 'easeOutBack',
           step: function(x) {
             $('.expend-calc').text((x).toFixed(1) + " Calories");
           }
@@ -140,7 +146,7 @@ $('.submit-expend').click(function() {
           counter: $heavilyMale
         }, {
           duration: 1500,
-          easing: 'swing',
+          easing: 'easeOutBack',
           step: function(x) {
             $('.expend-calc').text((x).toFixed(1) + " Calories");
           }
@@ -154,7 +160,7 @@ $('.submit-expend').click(function() {
           counter: $sedentaryFemale
         }, {
           duration: 1500,
-          easing: 'swing',
+          easing: 'easeOutBack',
           step: function(x) {
             $('.expend-calc').text((x).toFixed(1) + " Calories");
           }
@@ -166,7 +172,7 @@ $('.submit-expend').click(function() {
           counter: $lightlyFemale
         }, {
           duration: 1500,
-          easing: 'swing',
+          easing: 'easeOutBack',
           step: function(x) {
             $('.expend-calc').text((x).toFixed(1) + " Calories");
           }
@@ -178,7 +184,7 @@ $('.submit-expend').click(function() {
           counter: $moderatelyFemale
         }, {
           duration: 1500,
-          easing: 'swing',
+          easing: 'easeOutBack',
           step: function(x) {
             $('.expend-calc').text((x).toFixed(1) + " Calories");
           }
@@ -190,7 +196,7 @@ $('.submit-expend').click(function() {
           counter: $heavilyFemale
         }, {
           duration: 1500,
-          easing: 'swing',
+          easing: 'easeOutBack',
           step: function(x) {
             $('.expend-calc').text((x).toFixed(1) + " Calories");
           }
@@ -225,8 +231,18 @@ $('.submit-bmi').click(function() {
 
   var $bmi = (($kg) / ($meters * $meters));
 
+  var $countStart = 0;
+
   if ($feetInput.val() && $inchesInput.val() && $weightInput.val()) {
-    $('.bmi-calc').append($bmi.toFixed(1));
+    $({counter: $countStart}).animate({
+        counter: $bmi
+      }, {
+        duration: 1500,
+        easing: 'easeOutBack',
+        step: function(x) {
+          $('.bmi-calc').text((x).toFixed(1));
+        }
+      });
   } else {
     $('.bmi-calc').append('please fill out all fields.');
   }
