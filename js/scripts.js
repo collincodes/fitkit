@@ -18,7 +18,7 @@ $('input').keypress(function(key) {
 
 // Tabs to choose calculator
 
-$('#fitTabs .nav-item:last-child .nav-link').tab('show');
+$('#fitTabs .nav-item:first-child .nav-link').tab('show');
 
 
 // Daily Energy Expenditure Calculator
