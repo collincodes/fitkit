@@ -106,6 +106,8 @@ $('.submit-expend').click(function() {
   if ( $('.male').hasClass('active') && $('.weight input').val() && $('.age input').val() && $('.feet input').val() && $('.inches input').val()) {
     if ( $('.sedentary').hasClass('active') ) {
       $('.nav-link.macros').removeClass('disabled');
+      $('.calculation .constant').addClass('animated');
+
       var $sedentaryMale = ($expendMale * 1.2);
       $({counter: $countStart}).animate({
           counter: $sedentaryMale
@@ -119,6 +121,8 @@ $('.submit-expend').click(function() {
       // $('.expend-calc').append($sedentaryMale.toFixed(1) + ' Calories');
     } else if ( $('.lightly').hasClass('active') ) {
       $('.nav-link.macros').removeClass('disabled');
+      $('.calculation .constant').addClass('animated');
+
       var $lightlyMale = ($expendMale * 1.375);
       $({counter: $countStart}).animate({
           counter: $lightlyMale
@@ -132,6 +136,8 @@ $('.submit-expend').click(function() {
       // $('.expend-calc').append($lightlyMale.toFixed(1) + ' Calories');
     } else if ( $('.moderately').hasClass('active') ) {
       $('.nav-link.macros').removeClass('disabled');
+      $('.calculation .constant').addClass('animated');
+
       var $moderatelyMale = ($expendMale * 1.55);
       $({counter: $countStart}).animate({
           counter: $moderatelyMale
@@ -145,6 +151,8 @@ $('.submit-expend').click(function() {
       // $('.expend-calc').append($moderatelyMale.toFixed(1) + ' Calories');
     } else if ( $('.heavily').hasClass('active') ) {
       $('.nav-link.macros').removeClass('disabled');
+      $('.calculation .constant').addClass('animated');
+
       var $heavilyMale = ($expendMale * 1.725);
       $({counter: $countStart}).animate({
           counter: $heavilyMale
@@ -160,6 +168,8 @@ $('.submit-expend').click(function() {
   } else if ( $('.female').hasClass('active') && $('.weight input').val() && $('.age input').val() && $('.feet input').val() && $('.inches input').val()) {
     if ( $('.sedentary').hasClass('active') ) {
       $('.nav-link.macros').removeClass('disabled');
+      $('.calculation .constant').addClass('animated');
+
       var $sedentaryFemale = ($expendFemale * 1.2);
       $({counter: $countStart}).animate({
           counter: $sedentaryFemale
@@ -173,6 +183,8 @@ $('.submit-expend').click(function() {
       // $('.expend-calc').append($sedentaryFemale.toFixed(1) + ' Calories');
     } else if ( $('.lightly').hasClass('active') ) {
       $('.nav-link.macros').removeClass('disabled');
+      $('.calculation .constant').addClass('animated');
+
       var $lightlyFemale = ($expendFemale * 1.375);
       $({counter: $countStart}).animate({
           counter: $lightlyFemale
@@ -186,6 +198,8 @@ $('.submit-expend').click(function() {
       // $('.expend-calc').append($lightlyFemale.toFixed(1) + ' Calories');
     } else if ( $('.moderately').hasClass('active') ) {
       $('.nav-link.macros').removeClass('disabled');
+      $('.calculation .constant').addClass('animated');
+
       var $moderatelyFemale = ($expendFemale * 1.55);
       $({counter: $countStart}).animate({
           counter: $moderatelyFemale
@@ -199,6 +213,8 @@ $('.submit-expend').click(function() {
       // $('.expend-calc').append($moderatelyFemale.toFixed(1) + ' Calories');
     } else if ( $('.heavily').hasClass('active') ) {
       $('.nav-link.macros').removeClass('disabled');
+      $('.calculation .constant').addClass('animated');
+
       var $heavilyFemale = ($expendFemale * 1.725);
       $({counter: $countStart}).animate({
           counter: $heavilyFemale
