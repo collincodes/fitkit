@@ -40,15 +40,22 @@
         <div class="tab-pane" id="bodymass" role="tabpanel">
           <h1>Calculate Your BMI</h1>
 
-          <h5 class="bmi-message">BMI is a Simple & Basic Measurement Used to Classify an Adult Individual's Body Composition.</h5>
-          <h6 class="input-message">Enter Your Height & Weight Below.</h6>
+          <h5 class="bmi-message">BMI is a Simple & Basic Measurement Used to Classify an Adult Individual's Body Composition</h5>
+          <h6 class="input-message">Enter Your Height & Weight Below</h6>
+
+          <div class="switch">
+            <div class="circle left"></div>
+          </div>
 
           <div class="variables">
-            <div class="variable">
+            <div class="variable metric active">
+              <input type="text" name="kilo" placeholder="kilograms">
+              <input type="text" name="cent" placeholder="centimeters">
+            </div>
+            <div class="variable imperial">
+              <input type="text" name="lbs" placeholder="pounds">
               <input type="text" name="feet" placeholder="feet">
               <input type="text" name="inches" placeholder="inches">
-
-              <input type="text" name="weight" placeholder="weight">
             </div>
           </div>
 
@@ -70,19 +77,22 @@
             </div>
           </div>
 
-          <h5 class="input-message">Enter Your Weight, Age, & Height Below & Choose Activity Level</h5>
+          <h5 class="input-message">Enter Your Age, Weight, & Height Below & Choose Activity Level</h5>
+
+          <div class="switch">
+            <div class="circle left"></div>
+          </div>
 
           <div class="variables">
-            <div class="weight variable">
-              <input type="text" name="weight" placeholder="Weight">
-            </div>
-            <div class="age variable">
+            <div class="variable metric active">
               <input type="text" name="age" placeholder="Age">
+              <input type="text" name="kilo" placeholder="Kilograms">
+              <input type="text" name="cent" placeholder="Centimeters">
             </div>
-            <div class="feet variable">
+            <div class="variable imperial">
+              <input type="text" name="age" placeholder="Age">
+              <input type="text" name="lbs" placeholder="Pounds">
               <input type="text" name="feet" placeholder="Feet">
-            </div>
-            <div class="inches variable">
               <input type="text" name="inches" placeholder="Inches">
             </div>
           </div>

@@ -6,19 +6,48 @@
     margin-bottom: 1rem
     font-weight: 300
     transition: 0.5s
+    font-style: italic
   .input-message
     letter-spacing: 1px
     font-weight: 300
+    font-size: 1.25rem
+  .switch
+    width: 4rem
+    height: 2px
+    border-radius: 5px
+    background-color: white
+    display: flex
+    margin: 3rem auto 1rem
+    position: relative
+    cursor: pointer
+    .circle
+      position: absolute
+      height: 2rem
+      width: 2rem
+      top: -1rem
+      background-color: white
+      border-radius: 100%
+      transition: 0.5s
+    .left
+      left: 0
+    .right
+      right: 0
   .variables
     display: flex
     align-items: center
     justify-content: center
+    .active
+      display: flex !important
     .variable
-      display: flex
+      display: none
       justify-content: space-around
       width: 100%
       input
         margin: 2rem 0 1rem
+    .metric
+      input:last-child
+        margin-left: 1rem
+    .imperial
       input:nth-child(2)
         margin-left: 1rem
         margin-right: 1rem
