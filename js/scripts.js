@@ -511,7 +511,7 @@ $('.goal, .body-type').find('.pick').click(function() {
   $(this).siblings('.pick.active').removeClass('active');
 
   // Description Message
-  var $message = $('.input-message');
+  var $message = $('#macros .input-message');
 
   if ($(this).hasClass('ecto')) {
     $message.empty();
