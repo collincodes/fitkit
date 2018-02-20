@@ -501,4 +501,29 @@ $('.submit-expend').click(function() {
   $('html, body').animate({scrollTop:$('.expend-calc').position().top}, '2000');
 });
 
+
+////////////////////////////////////////
+// Macros Scripts
+
+// Toggle active goal
+$('.goal, .body-type').find('.pick').click(function() {
+  $(this).addClass('active');
+  $(this).siblings('.pick.active').removeClass('active');
+
+  // Description Message
+  var $message = $('.input-message');
+
+  if ($(this).hasClass('ecto')) {
+    $message.empty();
+    $message.text('Thinner physique, smaller bone structure, and fast metabolic rate');
+  } else if ($(this).hasClass('endo')) {
+    $message.empty();
+    $message.text('Bigger physique, larger bone structure, and higher total body & fat mass');
+  } else if ($(this).hasClass('meso')) {
+    $message.empty();
+    $message.text('Athletic physique, medium bone structure, and above average lean muscle mass');
+  }
+
+});
+
 });

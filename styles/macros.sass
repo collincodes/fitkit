@@ -1,0 +1,42 @@
+// main: styles.sass
+
+#macros
+  .body-type
+    margin-bottom: 1rem
+  .goal
+    margin-bottom: 3rem
+  .goal, .body-type
+    display: flex
+    justify-content: center
+    align-items: center
+    .pick
+      padding: 0.5rem 3rem
+      border: 2px solid transparent
+      border-radius: 2rem
+      margin: 0 0.5rem
+      transition: 0.25s
+      cursor: pointer
+      letter-spacing: 1px
+      h6
+        font-weight: 300
+    .active
+      border: 2px solid white
+  .input-message
+    margin-bottom: 2rem
+    letter-spacing: 1px
+    font-weight: 300
+    transition: 0.5s
+  .macro-icons
+    display: flex
+    .carbs, .protein, .fats, .calories
+      width: 25%
+      .icon
+        background-size: cover
+        background-position: center bottom
+        background-repeat: no-repeat
+        height: 8rem
+        width: 8rem
+        margin: 0 auto
+      h3
+        margin-top: 2rem
+        font-weight: 300

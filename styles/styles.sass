@@ -5,6 +5,9 @@ $phone: "only screen and (max-width: 568px)"
 $medium: "only screen and (max-width: 768px)"
 $tablet: "only screen and (max-width: 1024px) and (min-width: 569px)"
 
+$above1: "only screen and (min-width: 1024px)"
+$above2: "only screen and (min-width: 1440px)"
+
 @import 'header'
 @import 'macros'
 @import 'bmi'
@@ -35,7 +38,7 @@ html
         display: flex
         align-items: center
         justify-content: center
-        min-width: 50%
+        width: 100%
         .tab-pane.active
           width: 100%
     h1, h2, h3, h4, h5, h6, p
@@ -68,3 +71,11 @@ html
 
 .animated
   opacity: 1 !important
+
+@media #{$above1}
+  .tab-content
+    max-width: 75%
+
+@media #{$above2}
+  #bodymass, #expend
+    max-width: 75%
