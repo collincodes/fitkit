@@ -499,8 +499,37 @@ $('.submit-expend').click(function() {
 
   $('.calculation').addClass('animated-expend');
   $('html, body').animate({scrollTop:$('.expend-calc').position().top}, '2000');
+
 });
 
+
+$('.nav-link.macros').click(function() {
+  var $wait = function wait() {
+    var $calc = $('.expend-calc').text();
+    $('.kcal-counter').text($calc);
+
+    ////////////////////////////////////////
+    // Macro Counter Animation
+    var $carbCount = parseInt($('.expend-calc').text()) * 0.4;
+
+    var $countStart1 = $('.macro-icons').find('.counter1').data('start');
+    var $countStart2 = $('.macro-icons').find('.counter2').data('start');
+    var $countStart3 = $('.macro-icons').find('.counter3').data('start');
+    var $countStart4 = $('.macro-icons').find('.counter4').data('start');
+
+    $({counter: $countStart1}).animate({
+      counter: $carbCount
+    }, {
+      duration: 5000,
+      easing: 'easeOutBack',
+      step: function(x) {
+        $('.counter1').text(Math.floor(x));
+      }
+    });
+  }
+
+  setTimeout($wait, 1600);
+});
 
 ////////////////////////////////////////
 // Macros Scripts
@@ -525,5 +554,6 @@ $('.goal, .body-type').find('.pick').click(function() {
   }
 
 });
+
 
 });
