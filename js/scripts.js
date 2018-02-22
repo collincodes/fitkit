@@ -265,7 +265,7 @@ $('.submit-expend').click(function() {
             duration: 1500,
             easing: 'easeOutBack',
             step: function(x) {
-              $('.expend-calc').text((x).toFixed(1));
+              $('.expend-calc').text((x).toFixed(0));
             }
           });
       } else if ( $('.lightly').hasClass('active') ) {
@@ -279,7 +279,7 @@ $('.submit-expend').click(function() {
             duration: 1500,
             easing: 'easeOutBack',
             step: function(x) {
-              $('.expend-calc').text((x).toFixed(1));
+              $('.expend-calc').text((x).toFixed(0));
             }
           });
       } else if ( $('.moderately').hasClass('active') ) {
@@ -293,7 +293,7 @@ $('.submit-expend').click(function() {
             duration: 1500,
             easing: 'easeOutBack',
             step: function(x) {
-              $('.expend-calc').text((x).toFixed(1));
+              $('.expend-calc').text((x).toFixed(0));
             }
           });
       } else if ( $('.heavily').hasClass('active') ) {
@@ -307,7 +307,7 @@ $('.submit-expend').click(function() {
             duration: 1500,
             easing: 'easeOutBack',
             step: function(x) {
-              $('.expend-calc').text((x).toFixed(1));
+              $('.expend-calc').text((x).toFixed(0));
             }
           });
       }
@@ -323,7 +323,7 @@ $('.submit-expend').click(function() {
             duration: 1500,
             easing: 'easeOutBack',
             step: function(x) {
-              $('.expend-calc').text((x).toFixed(1));
+              $('.expend-calc').text((x).toFixed(0));
             }
           });
       } else if ( $('.lightly').hasClass('active') ) {
@@ -337,7 +337,7 @@ $('.submit-expend').click(function() {
             duration: 1500,
             easing: 'easeOutBack',
             step: function(x) {
-              $('.expend-calc').text((x).toFixed(1));
+              $('.expend-calc').text((x).toFixed(0));
             }
           });
       } else if ( $('.moderately').hasClass('active') ) {
@@ -351,7 +351,7 @@ $('.submit-expend').click(function() {
             duration: 1500,
             easing: 'easeOutBack',
             step: function(x) {
-              $('.expend-calc').text((x).toFixed(1));
+              $('.expend-calc').text((x).toFixed(0));
             }
           });
       } else if ( $('.heavily').hasClass('active') ) {
@@ -365,7 +365,7 @@ $('.submit-expend').click(function() {
             duration: 1500,
             easing: 'easeOutBack',
             step: function(x) {
-              $('.expend-calc').text((x).toFixed(1));
+              $('.expend-calc').text((x).toFixed(0));
             }
           });
       }
@@ -386,7 +386,7 @@ $('.submit-expend').click(function() {
             duration: 1500,
             easing: 'easeOutBack',
             step: function(x) {
-              $('.expend-calc').text((x).toFixed(1));
+              $('.expend-calc').text((x).toFixed(0));
             }
           });
       } else if ( $('.lightly').hasClass('active') ) {
@@ -400,7 +400,7 @@ $('.submit-expend').click(function() {
             duration: 1500,
             easing: 'easeOutBack',
             step: function(x) {
-              $('.expend-calc').text((x).toFixed(1));
+              $('.expend-calc').text((x).toFixed(0));
             }
           });
       } else if ( $('.moderately').hasClass('active') ) {
@@ -414,7 +414,7 @@ $('.submit-expend').click(function() {
             duration: 1500,
             easing: 'easeOutBack',
             step: function(x) {
-              $('.expend-calc').text((x).toFixed(1));
+              $('.expend-calc').text((x).toFixed(0));
             }
           });
       } else if ( $('.heavily').hasClass('active') ) {
@@ -428,7 +428,7 @@ $('.submit-expend').click(function() {
             duration: 1500,
             easing: 'easeOutBack',
             step: function(x) {
-              $('.expend-calc').text((x).toFixed(1));
+              $('.expend-calc').text((x).toFixed(0));
             }
           });
       }
@@ -444,7 +444,7 @@ $('.submit-expend').click(function() {
             duration: 1500,
             easing: 'easeOutBack',
             step: function(x) {
-              $('.expend-calc').text((x).toFixed(1));
+              $('.expend-calc').text((x).toFixed(0));
             }
           });
       } else if ( $('.lightly').hasClass('active') ) {
@@ -458,7 +458,7 @@ $('.submit-expend').click(function() {
             duration: 1500,
             easing: 'easeOutBack',
             step: function(x) {
-              $('.expend-calc').text((x).toFixed(1));
+              $('.expend-calc').text((x).toFixed(0));
             }
           });
       } else if ( $('.moderately').hasClass('active') ) {
@@ -472,7 +472,7 @@ $('.submit-expend').click(function() {
             duration: 1500,
             easing: 'easeOutBack',
             step: function(x) {
-              $('.expend-calc').text((x).toFixed(1));
+              $('.expend-calc').text((x).toFixed(0));
             }
           });
       } else if ( $('.heavily').hasClass('active') ) {
@@ -486,7 +486,7 @@ $('.submit-expend').click(function() {
             duration: 1500,
             easing: 'easeOutBack',
             step: function(x) {
-              $('.expend-calc').text((x).toFixed(1));
+              $('.expend-calc').text((x).toFixed(0));
             }
           });
       }
@@ -502,34 +502,6 @@ $('.submit-expend').click(function() {
 
 });
 
-
-$('.nav-link.macros').click(function() {
-  var $wait = function wait() {
-    var $calc = $('.expend-calc').text();
-    $('.kcal-counter').text($calc);
-
-    ////////////////////////////////////////
-    // Macro Counter Animation
-    var $carbCount = parseInt($('.expend-calc').text()) * 0.4;
-
-    var $countStart1 = $('.macro-icons').find('.counter1').data('start');
-    var $countStart2 = $('.macro-icons').find('.counter2').data('start');
-    var $countStart3 = $('.macro-icons').find('.counter3').data('start');
-    var $countStart4 = $('.macro-icons').find('.counter4').data('start');
-
-    $({counter: $countStart1}).animate({
-      counter: $carbCount
-    }, {
-      duration: 5000,
-      easing: 'easeOutBack',
-      step: function(x) {
-        $('.counter1').text(Math.floor(x));
-      }
-    });
-  }
-
-  setTimeout($wait, 1600);
-});
 
 ////////////////////////////////////////
 // Macros Scripts
@@ -553,6 +525,114 @@ $('.goal, .body-type').find('.pick').click(function() {
     $message.text('Athletic physique, medium bone structure, and above average lean muscle mass');
   }
 
+});
+
+
+// Macros Variables
+var $goalLose = $('#macros').find('.lose');
+var $goalMaintain = $('#macros').find('.maintain');
+var $goalGain = $('#macros').find('.gain');
+
+var $typeEcto = $('#macros').find('.ecto');
+var $typeEndo = $('#macros').find('.endo');
+var $typeMeso = $('#macros').find('.meso');
+
+var $kcal = $('.kcal-counter');
+
+// Nav-Link Click functions
+$('.bmi.nav-link, .expend.nav-link').click(function() {
+  $('.notification').empty();
+});
+
+$('.macros.nav-link').click(function() {
+  if ( $.isNumeric($('.expend-calc').text()) && $kcal.is(':empty') ) {
+    $kcal.text($('.expend-calc').text());
+  }
+});
+
+$('#macros').find('.ecto, .endo, .meso').click(function() {
+  $('.units').addClass('animated');
+});
+
+$typeEcto.click(function() {
+  if ( $kcal.text() ) {
+    $('.carb-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .55).toFixed(0) );
+    $('.protein-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .25).toFixed(0) );
+    $('.fats-counter').text( (( parseInt($('.kcal-counter').text()) / 9 ) * .20).toFixed(0) );
+  }
+});
+
+$typeEndo.click(function() {
+  if ( $kcal.text() ) {
+    $('.carb-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .25).toFixed(0) );
+    $('.protein-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .35).toFixed(0) );
+    $('.fats-counter').text( (( parseInt($('.kcal-counter').text()) / 9 ) * .40).toFixed(0) );
+  }
+});
+
+$typeMeso.click(function() {
+  if ( $kcal.text() ) {
+    $('.carb-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .40).toFixed(0) );
+    $('.protein-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .30).toFixed(0) );
+    $('.fats-counter').text( (( parseInt($('.kcal-counter').text()) / 9 ) * .30).toFixed(0) );
+  }
+});
+
+$goalLose.click(function() {
+  if ( $kcal.text() ) {
+    $kcal.text(parseInt($('.expend-calc').text()) - 500);
+    if ( $('.ecto').hasClass('active') ) {
+      $('.carb-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .55).toFixed(0) );
+      $('.protein-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .25).toFixed(0) );
+      $('.fats-counter').text( (( parseInt($('.kcal-counter').text()) / 9 ) * .20).toFixed(0) );
+    } else if ( $('.endo').hasClass('active') ) {
+      $('.carb-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .25).toFixed(0) );
+      $('.protein-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .35).toFixed(0) );
+      $('.fats-counter').text( (( parseInt($('.kcal-counter').text()) / 9 ) * .40).toFixed(0) );
+    } else if ( $('.meso').hasClass('active') ) {
+      $('.carb-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .40).toFixed(0) );
+      $('.protein-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .30).toFixed(0) );
+      $('.fats-counter').text( (( parseInt($('.kcal-counter').text()) / 9 ) * .30).toFixed(0) );
+    }
+  }
+});
+
+$goalMaintain.click(function() {
+  if ( $kcal.text() ) {
+    $kcal.text(parseInt($('.expend-calc').text()));
+    if ( $('.ecto').hasClass('active') ) {
+      $('.carb-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .55).toFixed(0) );
+      $('.protein-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .25).toFixed(0) );
+      $('.fats-counter').text( (( parseInt($('.kcal-counter').text()) / 9 ) * .20).toFixed(0) );
+    } else if ( $('.endo').hasClass('active') ) {
+      $('.carb-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .25).toFixed(0) );
+      $('.protein-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .35).toFixed(0) );
+      $('.fats-counter').text( (( parseInt($('.kcal-counter').text()) / 9 ) * .40).toFixed(0) );
+    } else if ( $('.meso').hasClass('active') ) {
+      $('.carb-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .40).toFixed(0) );
+      $('.protein-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .30).toFixed(0) );
+      $('.fats-counter').text( (( parseInt($('.kcal-counter').text()) / 9 ) * .30).toFixed(0) );
+    }
+  }
+});
+
+$goalGain.click(function() {
+  if ( $kcal.text() ) {
+    $kcal.text(parseInt($('.expend-calc').text()) + 500);
+    if ( $('.ecto').hasClass('active') ) {
+      $('.carb-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .55).toFixed(0) );
+      $('.protein-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .25).toFixed(0) );
+      $('.fats-counter').text( (( parseInt($('.kcal-counter').text()) / 9 ) * .20).toFixed(0) );
+    } else if ( $('.endo').hasClass('active') ) {
+      $('.carb-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .25).toFixed(0) );
+      $('.protein-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .35).toFixed(0) );
+      $('.fats-counter').text( (( parseInt($('.kcal-counter').text()) / 9 ) * .40).toFixed(0) );
+    } else if ( $('.meso').hasClass('active') ) {
+      $('.carb-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .40).toFixed(0) );
+      $('.protein-counter').text( (( parseInt($('.kcal-counter').text()) / 4 ) * .30).toFixed(0) );
+      $('.fats-counter').text( (( parseInt($('.kcal-counter').text()) / 9 ) * .30).toFixed(0) );
+    }
+  }
 });
 
 
