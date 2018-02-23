@@ -257,6 +257,7 @@ $('.submit-expend').click(function() {
       if ( $('.sedentary').hasClass('active') ) {
         $('.nav-link.macros').removeClass('disabled');
         $('.calculation .constant').addClass('animated');
+        $('.fas').addClass('animated');
 
         var $sedentaryMale = ($expendMetricMale * 1.2);
         $({counter: $countStart}).animate({
@@ -271,6 +272,7 @@ $('.submit-expend').click(function() {
       } else if ( $('.lightly').hasClass('active') ) {
         $('.nav-link.macros').removeClass('disabled');
         $('.calculation .constant').addClass('animated');
+        $('.fas').addClass('animated');
 
         var $lightlyMale = ($expendMetricMale * 1.375);
         $({counter: $countStart}).animate({
@@ -285,6 +287,7 @@ $('.submit-expend').click(function() {
       } else if ( $('.moderately').hasClass('active') ) {
         $('.nav-link.macros').removeClass('disabled');
         $('.calculation .constant').addClass('animated');
+        $('.fas').addClass('animated');
 
         var $moderatelyMale = ($expendMetricMale * 1.55);
         $({counter: $countStart}).animate({
@@ -299,6 +302,7 @@ $('.submit-expend').click(function() {
       } else if ( $('.heavily').hasClass('active') ) {
         $('.nav-link.macros').removeClass('disabled');
         $('.calculation .constant').addClass('animated');
+        $('.fas').addClass('animated');
 
         var $heavilyMale = ($expendMetricMale * 1.725);
         $({counter: $countStart}).animate({
@@ -315,6 +319,7 @@ $('.submit-expend').click(function() {
       if ( $('.sedentary').hasClass('active') ) {
         $('.nav-link.macros').removeClass('disabled');
         $('.calculation .constant').addClass('animated');
+        $('.fas').addClass('animated');
 
         var $sedentaryFemale = ($expendMetricFemale * 1.2);
         $({counter: $countStart}).animate({
@@ -329,6 +334,7 @@ $('.submit-expend').click(function() {
       } else if ( $('.lightly').hasClass('active') ) {
         $('.nav-link.macros').removeClass('disabled');
         $('.calculation .constant').addClass('animated');
+        $('.fas').addClass('animated');
 
         var $lightlyFemale = ($expendMetricFemale * 1.375);
         $({counter: $countStart}).animate({
@@ -343,6 +349,7 @@ $('.submit-expend').click(function() {
       } else if ( $('.moderately').hasClass('active') ) {
         $('.nav-link.macros').removeClass('disabled');
         $('.calculation .constant').addClass('animated');
+        $('.fas').addClass('animated');
 
         var $moderatelyFemale = ($expendMetricFemale * 1.55);
         $({counter: $countStart}).animate({
@@ -357,6 +364,7 @@ $('.submit-expend').click(function() {
       } else if ( $('.heavily').hasClass('active') ) {
         $('.nav-link.macros').removeClass('disabled');
         $('.calculation .constant').addClass('animated');
+        $('.fas').addClass('animated');
 
         var $heavilyFemale = ($expendMetricFemale * 1.725);
         $({counter: $countStart}).animate({
@@ -378,6 +386,7 @@ $('.submit-expend').click(function() {
       if ( $('.sedentary').hasClass('active') ) {
         $('.nav-link.macros').removeClass('disabled');
         $('.calculation .constant').addClass('animated');
+        $('.fas').addClass('animated');
 
         var $sedentaryMale = ($expendImperialMale * 1.2);
         $({counter: $countStart}).animate({
@@ -392,6 +401,7 @@ $('.submit-expend').click(function() {
       } else if ( $('.lightly').hasClass('active') ) {
         $('.nav-link.macros').removeClass('disabled');
         $('.calculation .constant').addClass('animated');
+        $('.fas').addClass('animated');
 
         var $lightlyMale = ($expendImperialMale * 1.375);
         $({counter: $countStart}).animate({
@@ -406,6 +416,7 @@ $('.submit-expend').click(function() {
       } else if ( $('.moderately').hasClass('active') ) {
         $('.nav-link.macros').removeClass('disabled');
         $('.calculation .constant').addClass('animated');
+        $('.fas').addClass('animated');
 
         var $moderatelyMale = ($expendImperialMale * 1.55);
         $({counter: $countStart}).animate({
@@ -420,6 +431,7 @@ $('.submit-expend').click(function() {
       } else if ( $('.heavily').hasClass('active') ) {
         $('.nav-link.macros').removeClass('disabled');
         $('.calculation .constant').addClass('animated');
+        $('.fas').addClass('animated');
 
         var $heavilyMale = ($expendImperialMale * 1.725);
         $({counter: $countStart}).animate({
@@ -436,6 +448,7 @@ $('.submit-expend').click(function() {
       if ( $('.sedentary').hasClass('active') ) {
         $('.nav-link.macros').removeClass('disabled');
         $('.calculation .constant').addClass('animated');
+        $('.fas').addClass('animated');
 
         var $sedentaryFemale = ($expendImperialFemale * 1.2);
         $({counter: $countStart}).animate({
@@ -450,6 +463,7 @@ $('.submit-expend').click(function() {
       } else if ( $('.lightly').hasClass('active') ) {
         $('.nav-link.macros').removeClass('disabled');
         $('.calculation .constant').addClass('animated');
+        $('.fas').addClass('animated');
 
         var $lightlyFemale = ($expendImperialFemale * 1.375);
         $({counter: $countStart}).animate({
@@ -464,6 +478,7 @@ $('.submit-expend').click(function() {
       } else if ( $('.moderately').hasClass('active') ) {
         $('.nav-link.macros').removeClass('disabled');
         $('.calculation .constant').addClass('animated');
+        $('.fas').addClass('animated');
 
         var $moderatelyFemale = ($expendImperialFemale * 1.55);
         $({counter: $countStart}).animate({
@@ -478,6 +493,7 @@ $('.submit-expend').click(function() {
       } else if ( $('.heavily').hasClass('active') ) {
         $('.nav-link.macros').removeClass('disabled');
         $('.calculation .constant').addClass('animated');
+        $('.fas').addClass('animated');
 
         var $heavilyFemale = ($expendImperialFemale * 1.725);
         $({counter: $countStart}).animate({
@@ -500,6 +516,19 @@ $('.submit-expend').click(function() {
   $('.calculation').addClass('animated-expend');
   $('html, body').animate({scrollTop:$('.expend-calc').position().top}, '2000');
 
+});
+
+
+// Mobile Next Button
+$('.fas').click(function() {
+  $('.macros.nav-link').tab('show');
+  $('html, body').animate({
+    scrollTop:$('header').position().top
+  }, '1000');
+
+  if ( $.isNumeric($('.expend-calc').text()) && $('.kcal-counter').is(':empty') ) {
+    $('.kcal-counter').text($('.expend-calc').text());
+  }
 });
 
 
