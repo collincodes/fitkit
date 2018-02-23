@@ -48,7 +48,29 @@
   .notification
     margin-bottom: 5rem
 
-@media #{$tablet}
+@media #{$below2}
   .icon
     height: 6rem !important
     width: 6rem !important
+
+@media #{$below1}
+  #macros
+    .goal, .body-type
+      flex-direction: column
+      .pick
+        width: 100%
+        margin-bottom: 0.5rem
+
+@media #{$medium}
+  .macro-icons
+    flex-wrap: wrap
+    .carbs, .protein, .fats, .calories
+      width: 50% !important
+      margin-bottom: 5rem
+
+@media #{$phone}
+  .macro-icons
+    flex-wrap: wrap
+    .carbs, .protein, .fats, .calories
+      width: 100% !important
+      margin-bottom: 5rem
